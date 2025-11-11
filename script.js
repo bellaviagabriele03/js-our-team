@@ -49,11 +49,55 @@ const teamMembers = [
 ];
 
 
-//elementi presi dal D.O.M 
-const mainPage = document.querySelector("#content")
 
 
-//funzione per creare una card 
+
+
+
+//elementi presi dal D.O.M.
+const mainPage = document.querySelector("#content");
+
+
+
+
+
+//funzione per creare UNA card 
+function createCard() {
+}
+
+
 
 
 //funzione di stampa delle card 
+function printCard(array) {
+
+  //array scroll per prendere ogni membro 
+  for (let i = 0; i < array.length; i++) {
+
+    //salvo ogni membro nella variabile "curMember"
+    let curMember = array[i];
+    const { name, role, email, img } = curMember;
+    mainPage.innerHTML += `
+       <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-2">
+                    <img src="./${img}" class="img-fluid rounded-start" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${name}</h5>
+                        <p class="card-text">${role}</p>
+                        <a class="card-link" href="">${email}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
+
+
+  }
+
+
+}
+
+printCard(teamMembers);
