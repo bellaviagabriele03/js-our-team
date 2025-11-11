@@ -49,3 +49,11 @@ const teamMembers = [
 ];
 
 
+//elementi presi dal D.O.M 
+const mainPage = document.querySelector("#content")
+
+
+//funzione per creare una card 
+
+
+//funzione di stampa delle card 
