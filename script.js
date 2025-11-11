@@ -63,6 +63,7 @@ const mainPage = document.querySelector("#content");
 
 //funzione per creare UNA card 
 function createCard() {
+
 }
 
 
@@ -70,34 +71,35 @@ function createCard() {
 
 //funzione di stampa delle card 
 function printCard(array) {
-
+  let oneTap = "";
   //array scroll per prendere ogni membro 
   for (let i = 0; i < array.length; i++) {
 
     //salvo ogni membro nella variabile "curMember"
     let curMember = array[i];
     const { name, role, email, img } = curMember;
-    mainPage.innerHTML += `
-       <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-2">
-                    <img src="./${img}" class="img-fluid rounded-start" alt="">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">${name}</h5>
-                        <p class="card-text">${role}</p>
-                        <a class="card-link" href="">${email}</a>
-                    </div>
-                </div>
+
+    oneTap += `
+       <div class="col-4 m-2 bg-secondary text-light border-dark">
+          <div class="row">
+            <div class="col-md-4">
+              <img class = "img-fluid rounded-start" src="./${img}" alt="">
+            </div>
+            <div class="col-md-8">
+              <div class="d-flex flex-column justify-content-center">
+                <h2 class="">${name}</h2>
+                <p class="">${role}</p>
+                <a class="link-info" href="">${email}</a>
+              </div>
+            </div>
             </div>
         </div>
-    `
-
-
+    `;
   }
-
+  mainPage.innerHTML = oneTap;
 
 }
 
-printCard(teamMembers);
+
+//invocazione funzione  
+printCard(teamMembers)
