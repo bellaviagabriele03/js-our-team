@@ -80,10 +80,10 @@ function printCard(array) {
     const { name, role, email, img } = curMember;
 
     oneTap += `
-       <div class="col-4 m-2 bg-secondary text-light border-dark">
+       <div class="col-4 m-2 bg-dark bg-gradient text-light border border-info p-3 rounded-4">
           <div class="row">
             <div class="col-md-4">
-              <img class = "img-fluid rounded-start" src="./${img}" alt="">
+              <img class = "img-fluid  mt-1 rounded-3" src="./${img}" alt="">
             </div>
             <div class="col-md-8">
               <div class="d-flex flex-column justify-content-center">
